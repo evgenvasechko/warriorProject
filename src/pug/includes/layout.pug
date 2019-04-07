@@ -1,0 +1,18 @@
+include /includes/data
+include /includes/require
+
+block variables
+
+doctype html
+html(lang="en")
+  head
+    include /includes/head
+  body
+    .page
+      .page__header
+        include /sections/header
+      .page__inner
+        main.page__content
+          block content
+      .page__footer
+        include /sections/footer
