@@ -1,0 +1,62 @@
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 4))}
+}
+
+
+// Styling
+.slider {
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	
+	&::before,
+	&::after {
+		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		content: "";
+		height: 500px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll 50s linear infinite;
+		display: flex;
+		width: calc(300px * 4);
+	}
+	
+	.slide {
+		height: 250px;
+		width: 300px;
+        margin-left: 1.5rem;
+        box-shadow: 0 10px 20px 0 rgba(0,0,0,0.50);
+        img {
+            height: 250px;
+            width: 300px;
+        }
+	}
+}
+.gallery{
+    &__header {
+        text-align: center
+        color: #2F2F2F
+        margin: 5rem 0;
+    }
+    &__button {
+        text-align: center;
+        margin: 4rem 0;
+    }
+}
