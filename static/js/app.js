@@ -60,15 +60,13 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */,
 /* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88,6 +86,8 @@ requireAll(__webpack_require__(7)); // подключение pug-шаблоно
 requireAll(__webpack_require__(8));
 
 /***/ }),
+/* 3 */,
+/* 4 */,
 /* 5 */
 /***/ (function(module, exports) {
 

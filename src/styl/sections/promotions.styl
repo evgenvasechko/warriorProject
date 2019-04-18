@@ -1,0 +1,63 @@
+.promotions
+    &__header
+        text-align: center
+        color: #717171
+        line-height: 3
+    &__list
+        display: flex
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 0 0 8rem 0
+    &__unit
+        display: flex
+        flex: 1
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        width: 30%;
+        justify-content: space-between;
+        margin-right: 2rem
+        padding: 1rem
+        box-shadow: 0 2px 14px 0 rgba(0,0,0,0.50);
+        &:last-child
+            margin: 0
+
+.promotion
+    &__image
+        flex: 3
+        display: flex
+        flex-direction: column
+        justify-content: center 
+        align-items: center
+        & img 
+            width: 80%;
+            margin-top: 3rem;
+    &__info
+        font-size: 1.5rem
+        line-height: 1.4
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        flex: 1
+        padding: 2rem 0;
+    &__name
+        font-weight: 600
+    &__price
+        position: absolute;
+        color: #3348E6;
+        font-size: 3rem;
+        right: 0;
+        top: 60%;
+        text-shadow: 0px 0px 20px #fff;
+    &__more
+        position: absolute;
+        bottom: -1rem;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        color: #fff;
+        & span
+            padding: 1rem 3rem;
+            background: #3348E6;
