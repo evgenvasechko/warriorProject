@@ -71,9 +71,9 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_app_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_app_js__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_app_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__js_app_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styl_app_styl__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styl_app_styl__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styl_app_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styl_app_styl__);
 
 
@@ -81,26 +81,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 let requireAll = r => r.keys().forEach(r); // подключение svg-спрайтов
 
 
-requireAll(__webpack_require__(7)); // подключение pug-шаблонов
+requireAll(__webpack_require__(8)); // подключение pug-шаблонов
 
-requireAll(__webpack_require__(8));
+requireAll(__webpack_require__(9));
 
 /***/ }),
 /* 3 */,
 /* 4 */,
-/* 5 */
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -109,14 +110,15 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 7;
+webpackEmptyContext.id = 8;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./index.pug": 9
+	"./catalog.pug": 10,
+	"./index.pug": 11
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -132,10 +134,16 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 8;
+webpackContext.id = 9;
 
 /***/ }),
-/* 9 */
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "catalog.html";
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "index.html";
