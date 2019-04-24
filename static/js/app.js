@@ -118,7 +118,8 @@ webpackEmptyContext.id = 8;
 
 var map = {
 	"./catalog.pug": 10,
-	"./index.pug": 11
+	"./gallery.pug": 11,
+	"./index.pug": 12
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -144,6 +145,12 @@ module.exports = __webpack_require__.p + "catalog.html";
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "gallery.html";
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "index.html";
