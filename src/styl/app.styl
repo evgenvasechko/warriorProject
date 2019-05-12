@@ -112,6 +112,33 @@ a
             color: #3348E6
             transition .5s all ease-out
 
+.close
+  width: 25px;
+  height: 25px;
+  right: -1rem;
+  top: -3rem;
+  position: absolute;
+  &:before
+    content: '';
+    display: block;
+    transform: rotate(-45deg);
+    height: 2rem;
+    width: 2px;
+    position: absolute;
+    background: #000;
+    left 50%;
+    top: 0;
+  &:after
+    content: '';
+    display: block;
+    transform: rotate(45deg);
+    height:2rem;
+    width: 2px;
+    position: absolute;
+    background: #000;
+    left 50%;
+    top: 0;
+
 @require 'sections/header'
 @require 'sections/footer'
 
@@ -128,3 +155,4 @@ a
 @require 'sections/gallery'
 
 @require 'sections/call-us'
+@erquire 'sections/sell-unit'

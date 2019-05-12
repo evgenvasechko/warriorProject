@@ -16,13 +16,11 @@ window.addEventListener('DOMContentLoaded', function() {
             callUsForm.style.display = 'block';
             callUsForm.style.top = scrolled + 100 + 'px';
             document.body.style.overflow = "hidden";
-            //indexPage.classList.add('darked');
         });
 
         callUsClose.addEventListener('click', function(e) {
             callUsForm.style.display = 'none';
             document.body.style.overflow = "";
-            //indexPage.classList.remove('darked');
         });
 
         for (var i = 0; i < callUsField.length; i++) {
