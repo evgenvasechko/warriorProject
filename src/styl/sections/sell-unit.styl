@@ -1,4 +1,36 @@
 .sell-unit
     position: absolute;
-    display: flex;
-    flex-direction: row;
+    display: none;
+    flex-direction: column;
+    width: 70%
+    min-width: 480px
+    left: 15%
+    background: #fff
+    z-index: 12
+    padding: 2rem
+    & .close
+        top: 0.5rem
+        right: 0.5rem
+    &__image
+        & img
+            width: 90%
+            margin: 0 5%
+    &__header
+        text-align: center
+    &__info
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+        &_col
+            flex: 1
+            padding: 1rem
+            font-size: 1.5rem
+            line-height: 1.2
+            &:nth-child(1)
+                font-size: 1.7rem
+                line-height: 1.5
+                font-weight: 600
+                border-right: solid 1px #888
+    &__describe
+        margin: 0
