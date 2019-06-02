@@ -37,6 +37,7 @@ a
   color: #DCDCDC;
   background: #3348E6;
   padding: 1rem 2rem;
+  cursor: pointer
 
 .hero-sections
   height: 90vh;
@@ -106,18 +107,46 @@ a
           color: #fff;
           background: #3348E6
           padding: 1rem 3rem;
+          cursor: pointer
           &_active,
           &:hover
             background: #fff;
             color: #3348E6
             transition .5s all ease-out
-
+.close-modal
+  width: 25px;
+  height: 25px;
+  right: 1rem;
+  top: 1rem;
+  position: absolute;
+  cursor: pointer;
+  &:before
+    content: '';
+    display: block;
+    transform: rotate(-45deg);
+    height: 2rem;
+    width: 2px;
+    position: absolute;
+    background: #000;
+    left 50%;
+    top: 0;
+  &:after
+    content: '';
+    display: block;
+    transform: rotate(45deg);
+    height:2rem;
+    width: 2px;
+    position: absolute;
+    background: #000;
+    left 50%;
+    top: 0;
 .close
   width: 25px;
   height: 25px;
   right: -1rem;
   top: -3rem;
   position: absolute;
+  cursor: pointer;
   &:before
     content: '';
     display: block;
