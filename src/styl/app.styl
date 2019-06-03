@@ -120,26 +120,8 @@ a
   top: 1rem;
   position: absolute;
   cursor: pointer;
-  &:before
-    content: '';
-    display: block;
-    transform: rotate(-45deg);
-    height: 2rem;
-    width: 2px;
-    position: absolute;
-    background: #000;
-    left 50%;
-    top: 0;
-  &:after
-    content: '';
-    display: block;
-    transform: rotate(45deg);
-    height:2rem;
-    width: 2px;
-    position: absolute;
-    background: #000;
-    left 50%;
-    top: 0;
+  z-index: 3
+  font-size: 4rem;
 .close
   width: 25px;
   height: 25px;
@@ -147,26 +129,8 @@ a
   top: -3rem;
   position: absolute;
   cursor: pointer;
-  &:before
-    content: '';
-    display: block;
-    transform: rotate(-45deg);
-    height: 2rem;
-    width: 2px;
-    position: absolute;
-    background: #000;
-    left 50%;
-    top: 0;
-  &:after
-    content: '';
-    display: block;
-    transform: rotate(45deg);
-    height:2rem;
-    width: 2px;
-    position: absolute;
-    background: #000;
-    left 50%;
-    top: 0;
+  z-index: 3
+  font-size: 4rem;
 
 @require 'sections/header'
 @require 'sections/footer'

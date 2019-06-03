@@ -23,6 +23,11 @@ window.addEventListener('DOMContentLoaded', function() {
     var indexPage = document.querySelector('body');
     var scrolled;
     var i;
+    //Variables for gallery modal
+    var galleryModal = document.querySelector(".gallery-modal");
+    var galleryClose = document.getElementsByClassName("gallery-modal__close")[0];
+    var img = document.querySelectorAll(".gallery-image");
+    var modalImg = document.getElementById("gallery-modal-image");
 
     window.onscroll = function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -86,5 +91,19 @@ window.addEventListener('DOMContentLoaded', function() {
             this.nextElementSibling.classList.add('focus');
         })
     }
+
+// Script for gallery modal window
+
+    for(var g=0; g<img.length; g++) {
+        img[g].addEventListener('click', function(e){
+            galleryModal.style.display = "block";
+            modalImg.src = this.src;
+        })
+    }
+
+    galleryClose.addEventListener('click', function(e){
+        galleryModal.style.display = "none";
+    })
+
     
 });
