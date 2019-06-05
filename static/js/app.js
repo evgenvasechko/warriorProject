@@ -3738,7 +3738,8 @@ window.addEventListener('DOMContentLoaded', function () {
   var visible = slyderElems[0];
   var sellUnit = document.querySelector('.sell-unit');
   var readMore = document.querySelectorAll('.read-more');
-  var callUsBtn = document.querySelector('#call-us'); //Variables for call-us form
+  var callUsBtn = document.querySelector('#call-us');
+  var limitOfPictures = slyderElems.length - 1; //Variables for call-us form
 
   var callUsForm = document.querySelector('#call-us-form');
   var callUsField = document.querySelectorAll('input');
@@ -3752,11 +3753,15 @@ window.addEventListener('DOMContentLoaded', function () {
   var galleryClose = document.getElementsByClassName("gallery-modal__close")[0];
   var img = document.querySelectorAll(".gallery-image");
   var modalImg = document.getElementById("gallery-modal-image");
+  var previousImage = document.querySelector(".gallery-modal__prev");
+  var nextImage = document.querySelector(".gallery-modal__next");
+  var g;
 
   window.onscroll = function () {
     scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  }; // Script for sell-unit modal
+  };
 
+  console.log(limitOfPictures); // Script for sell-unit modal
 
   nextButton.addEventListener('click', function (e) {
     if (visible.nextSibling === null) {
@@ -3772,7 +3777,7 @@ window.addEventListener('DOMContentLoaded', function () {
   previousButton.addEventListener('click', function (e) {
     if (visible.previousSibling === null) {
       visible.style.display = 'none';
-      visible = slyderElems[2];
+      visible = slyderElems[limitOfPictures];
       visible.style.display = 'block';
     } else {
       visible.style.display = 'none';
@@ -3809,13 +3814,38 @@ window.addEventListener('DOMContentLoaded', function () {
   } // Script for gallery modal window
 
 
-  for (var g = 0; g < img.length; g++) {
+  var thisPicture;
+  var newStart;
+  var endStart;
+
+  for (g = 0; g < img.length; g++) {
     img[g].addEventListener('click', function (e) {
       galleryModal.style.display = "block";
       modalImg.src = this.src;
+      thisPicture = this;
     });
+    newStart = img[0];
+    endStart = img[img.length - 1];
   }
 
+  previousImage.addEventListener('click', function (e) {
+    if (thisPicture.previousSibling === null) {
+      thisPicture = endStart;
+      modalImg.src = thisPicture.src;
+    } else {
+      thisPicture = thisPicture.previousSibling;
+      modalImg.src = thisPicture.src;
+    }
+  });
+  nextImage.addEventListener('click', function (e) {
+    if (thisPicture.nextSibling === null) {
+      thisPicture = newStart;
+      modalImg.src = thisPicture.src;
+    } else {
+      thisPicture = thisPicture.nextSibling;
+      modalImg.src = thisPicture.src;
+    }
+  });
   galleryClose.addEventListener('click', function (e) {
     galleryModal.style.display = "none";
   });
