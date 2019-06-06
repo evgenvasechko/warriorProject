@@ -1,6 +1,10 @@
 .gallery-hero
     background-image: url('../images/gallery-hero.png')
-
+.gallery .container
+    display: flex
+    flex-direction: column
+    justify-content: center 
+    align-items: center
 .gallery-images
     &__list
         display: flex;
@@ -8,6 +12,8 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         margin: 3rem 0;
+    &__load-more
+        margin-bottom: 3rem
 
 .gallery-image
     border-style: none;

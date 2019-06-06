@@ -32,6 +32,9 @@ window.addEventListener('DOMContentLoaded', function() {
     var previousImage = document.querySelector(".gallery-modal__prev");
     var nextImage = document.querySelector(".gallery-modal__next");
     var g;
+    var thisPicture;
+    var newStart;
+    var endStart;
 
     window.onscroll = function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -99,9 +102,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
 // Script for gallery modal window
-    var thisPicture;
-    var newStart;
-    var endStart;
 
     for(g=0; g<img.length; g++) {
         img[g].addEventListener('click', function(e){
@@ -137,5 +137,9 @@ window.addEventListener('DOMContentLoaded', function() {
         galleryModal.style.display = "none";
     })
 
+
+//Script for gallery 'load more'
+    
+    var loadMoreButton = document.querySelector('.gallery-images__load-more');
     
 });
