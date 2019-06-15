@@ -32,15 +32,29 @@ window.addEventListener('DOMContentLoaded', function() {
     var previousImage = document.querySelector(".gallery-modal__prev");
     var nextImage = document.querySelector(".gallery-modal__next");
     var g;
+    var f;
     var thisPicture;
     var newStart;
     var endStart;
+    //Variables for gallery show more
+    var loadMoreButton = document.querySelector('.gallery-images__load-more');
+    var visibleImages;
+    var counter=25;
+    //Variables for gallery filter
+    var monumentFilter;
 
     window.onscroll = function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
     }
 
     console.log(limitOfPictures);
+
+    // var sortFunc = function(filterButton, filterUnit) {
+    //     var sorted = [];
+    //     if(filterUnit.hasClass(filterButton.) ){
+    //         sorted += sorted + filterUnit;
+    //     }
+    // }
 
 
 // Script for sell-unit modal
@@ -104,6 +118,9 @@ window.addEventListener('DOMContentLoaded', function() {
 // Script for gallery modal window
 
     for(g=0; g<img.length; g++) {
+        for(f=0; f<25; f++){
+            img[f].style.display = 'block';
+        }
         img[g].addEventListener('click', function(e){
             galleryModal.style.display = "block";
             modalImg.src = this.src;
@@ -112,6 +129,7 @@ window.addEventListener('DOMContentLoaded', function() {
         newStart = img[0];
         endStart = img[img.length - 1];
     }
+    
 
     previousImage.addEventListener('click', function(e){
         if(thisPicture.previousSibling === null) {
@@ -138,8 +156,16 @@ window.addEventListener('DOMContentLoaded', function() {
     })
 
 
-//Script for gallery 'load more'
-    
-    var loadMoreButton = document.querySelector('.gallery-images__load-more');
+// Show more pictures for gallery
+
+    loadMoreButton.addEventListener('click', function(e){
+        counter = counter + 25;
+        for (visibleImages = 0; visibleImages < counter && visibleImages < img.length; visibleImages++) {
+            if (visibleImages === img.length - 1) {
+                loadMoreButton.style.display = 'none';
+            }
+            img[visibleImages].style.display = 'block';
+        };
+    })
     
 });
