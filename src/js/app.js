@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', function() {
     var callUsClose = document.querySelector('.close');
     var indexPage = document.querySelector('body');
     var scrolled;
-    var i;
     //Variables for gallery modal
     var galleryModal = document.querySelector(".gallery-modal");
     var galleryClose = document.getElementsByClassName("gallery-modal__close")[0];
@@ -32,30 +31,40 @@ window.addEventListener('DOMContentLoaded', function() {
     var previousImage = document.querySelector(".gallery-modal__prev");
     var nextImage = document.querySelector(".gallery-modal__next");
     var g;
-    var f;
+    var q;
     var thisPicture;
     var newStart;
     var endStart;
     //Variables for gallery show more
     var loadMoreButton = document.querySelector('.gallery-images__load-more');
-    var visibleImages;
     var counter=25;
     //Variables for gallery filter
-    var monumentFilter;
+    var pageCategories = document.querySelectorAll('.filter-unit');
 
     window.onscroll = function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
     }
 
-    console.log(limitOfPictures);
-
-    // var sortFunc = function(filterButton, filterUnit) {
-    //     var sorted = [];
-    //     if(filterUnit.hasClass(filterButton.) ){
-    //         sorted += sorted + filterUnit;
-    //     }
-    // }
-
+// General methods
+    //Sorting start here
+    var SortBy = function(pageCategory, items){
+        var Sorted = [];
+        var categoryName = pageCategory.getAttribute('name');
+        for(var j = 0; j < items.length; j++) {
+            var itemCategory = items[j].className.split(' ')[1];
+            //console.log(imgCategory);
+            items[j].style.display = 'none';
+            if(itemCategory === categoryName) {
+                Sorted.push(items[j]);
+            }
+        }
+        Sorted.forEach(function(item){
+            item.style.display = 'block';
+        })
+        //console.log(Sorted);
+        Sorted = [];
+    };
+    //sorting ends here
 
 // Script for sell-unit modal
 
@@ -118,8 +127,13 @@ window.addEventListener('DOMContentLoaded', function() {
 // Script for gallery modal window
 
     for(g=0; g<img.length; g++) {
-        for(f=0; f<25; f++){
-            img[f].style.display = 'block';
+        if(img.length >= 25) {
+            for(q=0; q<25; q++){
+                img[q].style.display = 'block';
+            }
+        } else {
+            img[g].style.display = 'block';
+            loadMoreButton.style.display = 'none';
         }
         img[g].addEventListener('click', function(e){
             galleryModal.style.display = "block";
@@ -160,12 +174,27 @@ window.addEventListener('DOMContentLoaded', function() {
 
     loadMoreButton.addEventListener('click', function(e){
         counter = counter + 25;
-        for (visibleImages = 0; visibleImages < counter && visibleImages < img.length; visibleImages++) {
-            if (visibleImages === img.length - 1) {
+        for (var i = 0; i < counter && i < img.length; i++) {
+            if (i === img.length - 1) {
                 loadMoreButton.style.display = 'none';
             }
-            img[visibleImages].style.display = 'block';
+            img[i].style.display = 'block';
         };
     })
+
+
+// Scripts for filter
+//console.log(pageCategories)
     
+    
+    for(var i = 0; i < pageCategories.length; i++) {
+        
+        pageCategories[i].addEventListener('click', function(e){
+            pageCategories.forEach(function(item){
+                item.classList.remove('filter-unit_active');
+            }) 
+            this.classList.add('filter-unit_active');
+            SortBy(this, img);
+        });
+    }
 });
