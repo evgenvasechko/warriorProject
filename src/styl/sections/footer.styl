@@ -43,6 +43,8 @@
                 flex: 2
                 & h3
                     margin-bottom: 4rem;
+                    @media screen and (max-width 767px)
+                        margin-bottom: 0
             &_info
                 flex: 3
         &__adress,
@@ -55,11 +57,14 @@
             display: flex
             flex-direction: column    
     &__social-links
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         & a
             padding: 1.6rem 1.8rem;
             text-align: center;
             vertical-align: middle;
-            margin: 0 1rem 0 0;
+            margin: 1rem 1rem 0 0;
             font-size: 1.8rem;
             color: #fff
             &.facebook-link

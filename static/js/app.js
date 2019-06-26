@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 55);
+/******/ 	return __webpack_require__(__webpack_require__.s = 53);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -3701,9 +3701,7 @@ module.exports = setToArray;
 module.exports = __webpack_require__.p + "images/about-us-2.jpg";
 
 /***/ }),
-/* 53 */,
-/* 54 */,
-/* 55 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3722,6 +3720,8 @@ requireAll(__webpack_require__(161)); // подключение pug-шаблон
 requireAll(__webpack_require__(162));
 
 /***/ }),
+/* 54 */,
+/* 55 */,
 /* 56 */,
 /* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
