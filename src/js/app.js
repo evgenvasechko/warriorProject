@@ -5,6 +5,15 @@ import $ from 'jquery'
 import { TSCallSignatureDeclaration } from 'babel-types';
 window.$ = $
 window.addEventListener('DOMContentLoaded', function() {
+    //variables for header animation
+    var headerBar = document.querySelector('.header');
+    var submenuBar = document.querySelector('.header-submenu');
+    var catalogButton = document.querySelector('.catalog');
+    //variables for mobile-header
+    var mobileMenuButton = document.querySelector('.hamburger');
+    var mobileMenu = document.querySelector('.header-mobile .header-menu');
+    var mobileCatalogButton = document.querySelector('.mobile-catalog');
+    var mobileCatalogMenu = document.querySelectorAll('.mobile-catalog .header-submenu__unit');
     //variables for modal of sell-unit
     var closeModal = document.querySelector('.close-modal');
     var previousButton = document.querySelector('.previous');
@@ -22,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var callUsLabel = document.querySelectorAll('label');
     var callUsClose = document.querySelector('.close');
     var indexPage = document.querySelector('body');
-    var scrolled;
+    var scrolled = 0;
     //Variables for gallery modal
     var galleryModal = document.querySelector(".gallery-modal");
     var galleryClose = document.getElementsByClassName("gallery-modal__close")[0];
@@ -45,6 +54,7 @@ window.addEventListener('DOMContentLoaded', function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
     }
 
+
 // General methods
     //Sorting start here
     var SortBy = function(pageCategory, items){
@@ -65,6 +75,42 @@ window.addEventListener('DOMContentLoaded', function() {
         Sorted = [];
     };
     //sorting ends here
+
+
+// Script for header
+    catalogButton.addEventListener('mouseover', function(e){
+        submenuBar.style.display = 'flex';
+        headerBar.style.height = '20vh';
+    })
+    submenuBar.addEventListener('mouseover', function(e){
+        submenuBar.style.display = 'flex';
+        headerBar.style.height = '20vh';
+    })
+    submenuBar.addEventListener('mouseout', function(e){
+        submenuBar.style.display = 'none';
+        headerBar.style.height = '10vh';
+    })
+    catalogButton.addEventListener('mouseout', function(e){
+        submenuBar.style.display = 'none';
+        headerBar.style.height = '10vh';
+    })
+
+    //Script mobile-header
+    mobileMenuButton.addEventListener('click', function(e){
+        mobileMenuButton.classList.toggle('is-active');
+        mobileMenu.classList.toggle('header-menu_active');
+        if(mobileMenuButton.classList.contains('is-active')) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    })
+
+    mobileCatalogButton.addEventListener('click', function(e){
+        for(var i = 0; i < mobileCatalogMenu.length; i++) {
+            mobileCatalogMenu[i].style.display = "block"
+        }
+    })
 
 // Script for sell-unit modal
 
@@ -119,8 +165,15 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     for (var i = 0; i < callUsField.length; i++) {
-        callUsField[i].addEventListener('focus', function(){
+        callUsField[i].addEventListener('focusin', function(){
             this.nextElementSibling.classList.add('focus');
+        })
+        callUsField[i].addEventListener('focusout', function(){
+            var htmlstring = this.innerHTML;
+            htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/,'');
+            if(htmlstring === '') {
+                this.nextElementSibling.classList.remove('focus');
+            }
         })
     }
 

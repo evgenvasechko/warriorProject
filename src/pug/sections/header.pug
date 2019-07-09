@@ -2,8 +2,48 @@ header.header
     ul.header-menu
         li.header-menu__unit
             a(href="index.html") Главная
-        li.header-menu__unit
+        li.header-menu__unit.catalog
             a(href="catalog.html") Каталог
+        li.header-menu__unit
+            a(href="about-us.html") О нас
+        li.header-menu__unit
+            a(href="gallery.html") Галерея
+        li.header-menu__unit
+            a(href="3d-design.html") 3D-дизайн
+        li.header-menu__unit
+            a(href="contacts.html") Контакты
+        li.header-menu__unit
+            a Услуги
+    ul.header-submenu
+        li.header-submenu__unit 
+            a Памятники
+        li.header-submenu__unit 
+            a Лампады
+        li.header-submenu__unit 
+            a Бронза
+        li.header-submenu__unit 
+            a Ограды
+        li.header-submenu__unit 
+            a Надгробия
+
+header.header-mobile
+    button.hamburger.hamburger--slider(type="button")
+        span.hamburger-box
+            span.hamburger-inner
+    ul.header-menu
+        li.header-menu__unit
+            a(href="index.html") Главная
+        ul.header-menu__unit.mobile-catalog Каталог
+            li.header-submenu__unit 
+                a Памятники
+            li.header-submenu__unit 
+                a Лампады
+            li.header-submenu__unit 
+                a Бронза
+            li.header-submenu__unit 
+                a Ограды
+            li.header-submenu__unit 
+                a Надгробия
         li.header-menu__unit
             a(href="about-us.html") О нас
         li.header-menu__unit
