@@ -12,9 +12,13 @@
     align-items: center;
     line-height: 1;
     margin: 4rem 0 4rem 0
+    @media screen and (max-width: 767px)
+        flex-direction: column
     &__image
         flex: 2
         position: relative
+        @media screen and (max-width: 767px)
+            width: 100%
         & img
             width: 100%
             height: auto
@@ -30,3 +34,5 @@
         line-height: 1.3
 .reverse
     flex-direction: row-reverse
+    @media screen and (max-width: 767px)
+        flex-direction: column

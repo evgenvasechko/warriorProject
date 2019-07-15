@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 56);
+/******/ 	return __webpack_require__(__webpack_require__.s = 55);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -3703,8 +3703,7 @@ module.exports = __webpack_require__.p + "images/about-us-2.jpg";
 /***/ }),
 /* 53 */,
 /* 54 */,
-/* 55 */,
-/* 56 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3723,6 +3722,7 @@ requireAll(__webpack_require__(161)); // подключение pug-шаблон
 requireAll(__webpack_require__(162));
 
 /***/ }),
+/* 56 */,
 /* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3891,15 +3891,13 @@ window.addEventListener('DOMContentLoaded', function () {
   for (var i = 0; i < callUsField.length; i++) {
     callUsField[i].addEventListener('focusin', function () {
       this.nextElementSibling.classList.add('focus');
-    });
-    callUsField[i].addEventListener('focusout', function () {
-      var htmlstring = this.innerHTML;
-      htmlstring = htmlstring.trim ? htmlstring.trim() : htmlstring.replace(/^\s+/, '');
-
-      if (htmlstring === '') {
-        this.nextElementSibling.classList.remove('focus');
-      }
-    });
+    }); // callUsField[i].addEventListener('focusout', function(){
+    //     var htmlstring = this.innerHTML;
+    //     htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/,'');
+    //     if(htmlstring === '') {
+    //         this.nextElementSibling.classList.remove('focus');
+    //     }
+    // })
   } // Script for gallery modal window
 
 

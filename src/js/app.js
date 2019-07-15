@@ -168,13 +168,13 @@ window.addEventListener('DOMContentLoaded', function() {
         callUsField[i].addEventListener('focusin', function(){
             this.nextElementSibling.classList.add('focus');
         })
-        callUsField[i].addEventListener('focusout', function(){
-            var htmlstring = this.innerHTML;
-            htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/,'');
-            if(htmlstring === '') {
-                this.nextElementSibling.classList.remove('focus');
-            }
-        })
+        // callUsField[i].addEventListener('focusout', function(){
+        //     var htmlstring = this.innerHTML;
+        //     htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/,'');
+        //     if(htmlstring === '') {
+        //         this.nextElementSibling.classList.remove('focus');
+        //     }
+        // })
     }
 
 // Script for gallery modal window
