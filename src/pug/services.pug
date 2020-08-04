@@ -1,0 +1,51 @@
+extends /includes/layout
+
+include /mixins/image
+include /mixins/icon
+
+block content
+    include sections/services-hero
+    section.about-us__models
+        //.container
+        .card.reverse
+            .card__image
+                img(src="../images/services-3.jpg", alt="")
+            .card__information
+                .card__header Установка памятников и комплексов
+                .card__text В спектр наших услуг также входит установка с последующей гарантией. При установке используется высококлассное оборудование и материалы, а также проверенные и надежные технологии, что позволяет ручаться за свою работу в течение долгих лет. Мы заинтересованы и уверены в качестве своих материалов и предоставляемых услуг, а ориентация на клиента – наш принцип.
+    section.about-us__materials
+        //.container
+        .card
+            .card__image
+                img(src="../images/services-2.jpg", alt="")
+            .card__information
+                .card__header Художественное оформление
+                .card__text Красивое графическое оформление памятников – естественное желание любого клиента. С помощью наших художников в камне можно реализовать любое изображение - от выгравированных букв, вместо фурнитуры, до фотографий и картин. Все зависит лишь от пожеланий и финансовых возможностей.
+    section.about-us__models
+        //.container
+        .card.reverse
+            .card__image
+                img(src="../images/services-1.jpg", alt="")
+            .card__information
+                .card__header Изготовление
+                .card__text Если в наличии отсутствует необходимая позиция, мы в кратчайшие сроки изготовим то, что Вам понравилось, начиная с бордюров и плитки, заканчивая надгробиями, плитами и даже целыми комплексами. В налчии всегда есть необработанный камень и оборудование для изготовления из него всего вышеперечисленного.
+    section.about-us__map
+        //.container
+        .card
+            .card__image
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6ff966ede6227ab374e9482679b5b7065a8dc09b4ad68cd2b7546b75fee43a33&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
+            .card__information
+                .card__header Наши контакты
+                .card__text
+                    p Адрес:
+                    p 
+                        i.fas.fa-map-marked-alt   
+                        |    Аульская, 33, (напротив "Тайфуна")
+                    p Телефоны:
+                    p 
+                        i.fas.fa-phone
+                        |    +375 (33) 618-32-03, +375 (152) 68-83-49,<br> +375 (29) 642-08-48
+                    p E-mail:
+                    p 
+                        i.fas.fa-mail-bulk
+                        |    realvotiva@mail.ru

@@ -77,18 +77,45 @@ window.addEventListener('DOMContentLoaded', function() {
     //sorting ends here
 
 
+
+
+
+
+
+
+
+    
+// Script for reviews carousel
+
+    var reviewArray = document.getElementsByClassName('reviews__block');
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    var randomShow = function() {
+        var visibleBlock = getRandomInt(0, reviewArray.length);
+        console.log(visibleBlock);
+        for(var t=0; t<reviewArray.length; t++){
+            reviewArray[visibleBlock].style.display = "flex";
+        }
+    }
+    randomShow();
+
+
+
+
+
+
+
+
+
+
+
+
 // Script for header
     catalogButton.addEventListener('mouseover', function(e){
         submenuBar.style.display = 'flex';
         headerBar.style.height = '20vh';
-    })
-    submenuBar.addEventListener('mouseover', function(e){
-        submenuBar.style.display = 'flex';
-        headerBar.style.height = '20vh';
-    })
-    submenuBar.addEventListener('mouseout', function(e){
-        submenuBar.style.display = 'none';
-        headerBar.style.height = '10vh';
     })
     catalogButton.addEventListener('mouseout', function(e){
         submenuBar.style.display = 'none';
@@ -106,11 +133,11 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     })
 
-    mobileCatalogButton.addEventListener('click', function(e){
-        for(var i = 0; i < mobileCatalogMenu.length; i++) {
-            mobileCatalogMenu[i].style.display = "block"
-        }
-    })
+    // mobileCatalogButton.addEventListener('click', function(e){
+    //     for(var i = 0; i < mobileCatalogMenu.length; i++) {
+    //         mobileCatalogMenu[i].style.display = "block"
+    //     }
+    // })
 
 // Script for sell-unit modal
 
@@ -179,6 +206,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
 // Script for gallery modal window
 
+    var checkSize = function(){
+        if(thisPicture.naturalHeight/thisPicture.naturalWidth > 1) {
+            modalImg.style.height = "80vh";
+            modalImg.style.maxWidth = "auto";
+        } else {
+            modalImg.style.height = "auto";
+        }
+    }
+
     for(g=0; g<img.length; g++) {
         if(img.length >= 25) {
             for(q=0; q<25; q++){
@@ -189,7 +225,14 @@ window.addEventListener('DOMContentLoaded', function() {
             loadMoreButton.style.display = 'none';
         }
         img[g].addEventListener('click', function(e){
+            if(this.naturalHeight/this.naturalWidth > 1) {
+                modalImg.style.height = "80vh";
+                modalImg.style.maxWidth = "auto";
+            } else {
+                modalImg.style.height = "auto";
+            }
             galleryModal.style.display = "block";
+            console.log(this.naturalHeight/this.naturalWidth);
             modalImg.src = this.src;
             thisPicture = this;
         })
@@ -206,6 +249,7 @@ window.addEventListener('DOMContentLoaded', function() {
             thisPicture = thisPicture.previousSibling;
             modalImg.src = thisPicture.src;
         }
+        checkSize();
     })
 
     nextImage.addEventListener('click', function(e){
@@ -216,6 +260,7 @@ window.addEventListener('DOMContentLoaded', function() {
             thisPicture = thisPicture.nextSibling;
             modalImg.src = thisPicture.src;
         }
+        checkSize();
     })
 
     galleryClose.addEventListener('click', function(e){

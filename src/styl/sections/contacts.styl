@@ -11,8 +11,10 @@
         @media screen and (max-width: 767px)
             flex-direction: column
         & .page-about
-            margin: 1rem auto
+            //margin: 1rem auto
             width: 90%
+            @media screen and (max-width: 767px)
+                margin: 3rem auto
     & .hero-container .page-title
         line-height: 1
         text-align: start !important
@@ -20,8 +22,9 @@
         color: #fff
         @media screen and (max-width: 767px)
             height: auto;
-            top: 1rem;
-            margin: 7rem auto 3rem auto;
+            top: 5rem;
+            margin: 7rem auto;
+            width: 90%;
     & .page-title:after
         height: 60vh !important
         @media screen and (max-width: 767px)
