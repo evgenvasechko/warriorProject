@@ -12,7 +12,7 @@
     &:hover
         background: #fff
     &-menu
-        margin: .5rem auto
+        margin: 0 auto 0 auto
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -22,6 +22,8 @@
         max-width: 1366px;
         font-size: 1.6rem
         color: #444444
+        @media screen and (max-width: 767px)
+            margin: 10vh auto 0 auto
         &__unit
             padding: 1.5rem 2rem;
     &-mobile
@@ -51,14 +53,14 @@
             text-align: center;
             background: rgba(255,255,255, .9);
         &:before
-            content: 'heartstone.by'
+            content: 'Heartstone.by'
             display: block
             position: absolute
             left: 2rem
             top: 3rem;
             font-size: 3rem;
         & .hamburger
-            position: relative;
-            top: .5rem;
-            left: 90%;
+            position: absolute;
+            top: 0;
+            right: 0;
             outline: none;

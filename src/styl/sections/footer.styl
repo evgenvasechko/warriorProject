@@ -8,6 +8,8 @@
     justify-content: start;
     align-items: start;
     margin: 0 auto;
+    @media screen and (max-width: 767px)
+        margin: 0 1.2rem 5.6rem 1.2rem
     &-menu
         flex: 1;
         border-right: solid 1px #dbdbdb;
@@ -27,6 +29,8 @@
     &-information
         flex: 3;
         margin-right: 2rem;
+        @media screen and (max-width: 767px)
+            margin-right: 0
         &__description
             text-align: center;
             margin: 5rem 0 0 0;
@@ -35,6 +39,8 @@
             flex-direction: row;
             justify-content: start;
             align-items: start;
+            @media screen and (max-width: 767px)
+                flex-direction: column;
             &_social
                 display: flex;
                 flex-direction: column;
@@ -47,6 +53,8 @@
                         margin-bottom: 0
             &_info
                 flex: 3
+                @media screen and (max-width: 767px)
+                    width: 100%;
         &__adress,
         &__phones,
         &__email
@@ -55,7 +63,10 @@
             justify-content: space-between
         &__phones-block
             display: flex
-            flex-direction: column    
+            flex-direction: column   
+            p
+                @media screen and (max-width: 767px)
+                    margin-bottom: 0 
     &__social-links
         display: flex;
         flex-direction: row;

@@ -6,6 +6,12 @@
     border: none;
     outline: none;
     cursor: pointer
+    @media screen and (max-width: 767px)
+        width: 100%
+        right: 0
+        left: 0
+        bottom: 0
+        padding: 2rem 0
 
 .call-us-form
     display: none;
@@ -17,8 +23,8 @@
     padding: 2rem;
     box-shadow: 0px 0px 600px 400px rgba(0,0,0,0.6);
     @media screen and (max-width 767px)
-        width: 70%
-        left: 15%
+        width: 90%;
+        left: 5%;
     & input
         background: rgba(51, 72, 230, .5);
         border: none;
@@ -59,3 +65,6 @@
         text-align: center;
         color: #2f2f2f;
         position: relative
+    &__header
+        @media screen and (max-width: 767px)
+            font-weight: 400;
