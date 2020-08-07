@@ -6,9 +6,9 @@ $name = trim(strip_tags($_POST['name'])); //забираем данные из P
 $email = trim(strip_tags($_POST['email'])); // + фильтр пхп и хтмл символов
 $phone = trim(strip_tags($_POST['phone']));
 
-echo $name, $phone, $email; //проверочка данных
+// echo $name, $phone, $email; // проверочка данных
 
-$to = '777maximum777@mail.ru'; //здесь менять адрес
+$to = 'max.kublitski@gmail.com'; //здесь менять адрес
 $subject = '=?utf-8?B?'.base64_encode('Свяжитесь с ' . $name).'?='; //код для правильного отображения заголовка в почтовом ящике
 
 if(!empty($_POST['name']) & !empty($_POST['email']) & !empty($_POST['phone'])) //"валидация" формы

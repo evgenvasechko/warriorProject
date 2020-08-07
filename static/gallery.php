@@ -5,10 +5,10 @@
       <title>DomainName</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="styles/app.css?stamp=1563222984">
+      <link rel="stylesheet" href="styles/app.css?stamp=1596044794">
       <!--link(rel='stylesheet' href="styles/hamburgers.css")-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-      <script src="js/app.js?stamp=1563222984"></script>
+      <script src="js/app.js?stamp=1596044794"></script>
     </head>
   </head>
   <body>
@@ -23,32 +23,19 @@
             <li class="header-menu__unit"><a href="gallery.php">Галерея</a></li>
             <li class="header-menu__unit"><a href="3d-design.html">3D-дизайн</a></li>
             <li class="header-menu__unit"><a href="contacts.html">Контакты</a></li>
-            <li class="header-menu__unit"><a>Услуги</a></li>
-          </ul>
-          <ul class="header-submenu">
-            <li class="header-submenu__unit"> <a>Памятники</a></li>
-            <li class="header-submenu__unit"> <a>Лампады</a></li>
-            <li class="header-submenu__unit"> <a>Бронза</a></li>
-            <li class="header-submenu__unit"> <a>Ограды</a></li>
-            <li class="header-submenu__unit"> <a>Надгробия</a></li>
+            <li class="header-menu__unit"><a href="services.html">Услуги</a></li>
           </ul>
         </header>
         <header class="header-mobile">
           <button class="hamburger hamburger--slider" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
           <ul class="header-menu">
             <li class="header-menu__unit"><a href="index.php">Главная</a></li>
-            <ul class="header-menu__unit mobile-catalog">Каталог
-              <li class="header-submenu__unit"> <a>Памятники</a></li>
-              <li class="header-submenu__unit"> <a>Лампады</a></li>
-              <li class="header-submenu__unit"> <a>Бронза</a></li>
-              <li class="header-submenu__unit"> <a>Ограды</a></li>
-              <li class="header-submenu__unit"> <a>Надгробия</a></li>
-            </ul>
+            <li class="header-menu__unit"> <a href="catalog.html">Каталог</a></li>
             <li class="header-menu__unit"><a href="about-us.html">О нас</a></li>
             <li class="header-menu__unit"><a href="gallery.php">Галерея</a></li>
             <li class="header-menu__unit"><a href="3d-design.html">3D-дизайн</a></li>
             <li class="header-menu__unit"><a href="contacts.html">Контакты</a></li>
-            <li class="header-menu__unit"><a>Услуги</a></li>
+            <li class="header-menu__unit"><a href="services.html">Услуги</a></li>
           </ul>
         </header>
       </div>
@@ -66,7 +53,7 @@
           <section class="gallery">
             <div class="container">
               <div class="gallery-images__list">
-                  <?php
+              <?php
                   while ($row = $img->fetch())
                   {
                       echo "<img class='gallery-image fund' src='images/gallery-images/".$row['img_name']."' alt=''>";
@@ -84,19 +71,6 @@
       </div>
       <div class="page__footer">
         <footer class="footer">
-          <div class="footer-menu">
-            <ul>
-              <li class="footer-menu__unit"><a>Памятники</a></li>
-              <li class="footer-menu__unit"><a>Буквы</a></li>
-              <li class="footer-menu__unit"><a>Комплексы</a></li>
-              <li class="footer-menu__unit"><a>Ограды</a></li>
-              <li class="footer-menu__unit"><a>Кресты</a></li>
-              <li class="footer-menu__unit"><a>Лампады</a></li>
-              <li class="footer-menu__unit"><a>Вазы</a></li>
-              <li class="footer-menu__unit"><a>О нас</a></li>
-              <li class="footer-menu__unit"><a>Обратная связь</a></li>
-            </ul>
-          </div>
           <div class="footer-information">
             <div class="footer-information__contacts">
               <div class="footer-information__contacts_social">
@@ -142,7 +116,7 @@
         <label for="email">Введите e-mail</label>
       </div>
       <div class="call-us-form__field">
-        <input class="call-us__phone" type="tel" name="phone">
+        <input class="call-us__phone" type="tel" name="phone" placeholder="+375 ">
         <label for="phone">Введите номер телефона</label>
       </div>
       <div class="call-us-form__field">
