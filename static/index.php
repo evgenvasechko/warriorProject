@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <head>
-      <title>DomainName</title>
+      <title>Heartstone</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="styles/app.css?stamp=1596044794">
+      <link rel="stylesheet" href="styles/app.css?stamp=1596710895">
       <!--link(rel='stylesheet' href="styles/hamburgers.css")-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-      <script src="js/app.js?stamp=1596044794"></script>
+      <script src="js/app.js?stamp=1596710895"></script>
+      <script src="js/mail.js"></script>
     </head>
   </head>
   <body>
@@ -30,7 +31,7 @@
           <button class="hamburger hamburger--slider" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
           <ul class="header-menu">
             <li class="header-menu__unit"><a href="index.php">Главная</a></li>
-            <li class="header-menu__unit"> <a href="catalog.php">Каталог</a></li>
+            <li class="header-menu__unit"> <a href="catalog.html">Каталог</a></li>
             <li class="header-menu__unit"><a href="about-us.html">О нас</a></li>
             <li class="header-menu__unit"><a href="gallery.php">Галерея</a></li>
             <li class="header-menu__unit"><a href="3d-design.html">3D-дизайн</a></li>
@@ -47,8 +48,9 @@
             </div>
             <div class="main-hero-logo"><img class="main-hero-logo__image" src="images/logo.svg" alt="heartstone.by"></div>
             <div class="main-hero-contacts">
-              <p class="main-hero-contacts__adress">ул. Аульская 33 (напротив ЗАО “Тайфун”)</p>
-              <p class="main-hero-contacts__phones">+375 (33) 618-32-03, +375 (152) 99-13-29</p>
+              <p class="main-hero-contacts__adress">Адрес магазина: г. Гродно, ул. Белуша, д. 4, пав. 9</p>
+              <p class="main-hero-contacts__adress">Адрес склада: г. Гродно, ул. Аульская, д. 33 (напротив ЗАО “Тайфун”)</p>
+              <p class="main-hero-contacts__phones">Контактные телефоны: +375 (33) 618-32-03, <br/>+375 (33) 623-20-76, <br/>+375 (152) 68-83-49</p>
               <p class="main-hero-contacts__email">realvotiva@mail.ru</p>
             </div>
           </section>
@@ -120,7 +122,7 @@
               <h1 class="afford__header">Итальянская продукция RealVotiva</h1>
               <div class="afford__menu">
                 <video width="80%" poster="./images/about-us-1.jpeg" controls>
-                  <source src="./images/real_votiva.mp4" type="video/mp4">
+                  <source src="./images/real-votiva.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -202,21 +204,21 @@
         <footer class="footer">
           <div class="footer-information">
             <div class="footer-information__contacts">
-              <div class="footer-information__contacts_social">
-                <h3>Мы в социальных сетях</h3>
-                <div class="footer__social-links"><a class="facebook-link"><i class="fab fa-facebook-f"></i></a><a class="twitter-link"><i class="fab fa-twitter"></i></a><a class="vk-link"><i class="fab fa-vk"></i></a><a class="email-link"><i class="fas fa-envelope"></i></a></div>
-              </div>
               <div class="footer-information__contacts_info">
                 <div class="footer-information__adress">
-                  <h3>Адрес</h3>
-                  <p>ул. Аульская, стр. 8</p>
+                  <h3>Адрес склада:</h3>
+                  <p>г.Гродно, ул. Аульская, д. 33</p>
+                </div>
+                <div class="footer-information__adress">
+                  <h3>Адрес магазина:</h3>
+                  <p>г.Гродно, ул. Белуша, д. 4, пав. 9</p>
                 </div>
                 <div class="footer-information__phones">
                   <h3>Телефоны</h3>
                   <div class="footer-information__phones-block">
-                    <p>+375 (29) 123-45-67</p>
-                    <p>+375 (29) 123-45-67</p>
-                    <p>+375 (29) 123-45-67</p>
+                    <p>+375 (33) 618-32-03</p>
+                    <p>+375 (33) 623-20-76</p>
+                    <p>+375 (152) 68-83-49</p>
                   </div>
                 </div>
                 <div class="footer-information__email">
