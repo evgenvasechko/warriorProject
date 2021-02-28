@@ -216,8 +216,12 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     for(g=0; g<img.length; g++) {
-        if(img.length >= 25) {
-            for(q=0; q<25; q++){
+        let maxImg = 25;
+        if(img[g].naturalHeight/img[g].naturalWidth > 1) {
+            maxImg = maxImg + 2;
+        }
+        if(img.length >= maxImg) {
+            for(q=0; q<maxImg; q++){
                 img[q].style.display = 'block';
             }
         } else {
@@ -272,9 +276,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
     loadMoreButton.addEventListener('click', function(e){
         counter = counter + 25;
-        for (var i = 0; i < counter && i < img.length; i++) {
+        for (let i = 0; i < counter && i < img.length; i++) {
             if (i === img.length - 1) {
                 loadMoreButton.style.display = 'none';
+            }
+            if(img[i].naturalHeight/img[i].naturalWidth > 1){
+                img[i].style.flex = "1";
+                counter = counter + 2;
             }
             img[i].style.display = 'block';
         };
