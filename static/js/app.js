@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 63);
+/******/ 	return __webpack_require__(__webpack_require__.s = 65);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -3706,7 +3706,9 @@ module.exports = setToArray;
 
 
 /***/ }),
-/* 63 */
+/* 63 */,
+/* 64 */,
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3725,8 +3727,6 @@ requireAll(__webpack_require__(171)); // подключение pug-шаблон
 requireAll(__webpack_require__(172));
 
 /***/ }),
-/* 64 */,
-/* 65 */,
 /* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3831,15 +3831,15 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   randomShow(); // Script for header
-
-  catalogButton.addEventListener('mouseover', function (e) {
-    submenuBar.style.display = 'flex';
-    headerBar.style.height = '20vh';
-  });
-  catalogButton.addEventListener('mouseout', function (e) {
-    submenuBar.style.display = 'none';
-    headerBar.style.height = '10vh';
-  }); //Script mobile-header
+  // catalogButton.addEventListener('mouseover', function(e){
+  //     submenuBar.style.display = 'flex';
+  //     headerBar.style.height = '20vh';
+  // })
+  // catalogButton.addEventListener('mouseout', function(e){
+  //     submenuBar.style.display = 'none';
+  //     headerBar.style.height = '10vh';
+  // })
+  //Script mobile-header
 
   mobileMenuButton.addEventListener('click', function (e) {
     mobileMenuButton.classList.toggle('is-active');

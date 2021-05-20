@@ -113,14 +113,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 // Script for header
-    catalogButton.addEventListener('mouseover', function(e){
-        submenuBar.style.display = 'flex';
-        headerBar.style.height = '20vh';
-    })
-    catalogButton.addEventListener('mouseout', function(e){
-        submenuBar.style.display = 'none';
-        headerBar.style.height = '10vh';
-    })
+    // catalogButton.addEventListener('mouseover', function(e){
+    //     submenuBar.style.display = 'flex';
+    //     headerBar.style.height = '20vh';
+    // })
+    // catalogButton.addEventListener('mouseout', function(e){
+    //     submenuBar.style.display = 'none';
+    //     headerBar.style.height = '10vh';
+    // })
 
     //Script mobile-header
     mobileMenuButton.addEventListener('click', function(e){
