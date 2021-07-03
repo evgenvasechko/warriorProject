@@ -44,9 +44,6 @@ window.addEventListener('DOMContentLoaded', function() {
     var thisPicture;
     var newStart;
     var endStart;
-    //Variables for gallery show more
-    var loadMoreButton = document.querySelector('.gallery-images__load-more');
-    var counter=25;
     //Variables for gallery filter
     var pageCategories = document.querySelectorAll('.filter-unit');
 
@@ -216,18 +213,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     for(g=0; g<img.length; g++) {
-        let maxImg = 25;
-        if(img[g].naturalHeight/img[g].naturalWidth > 1) {
-            maxImg = maxImg + 2;
-        }
-        if(img.length >= maxImg) {
-            for(q=0; q<maxImg; q++){
-                img[q].style.display = 'block';
-            }
-        } else {
-            img[g].style.display = 'block';
-            loadMoreButton.style.display = 'none';
-        }
         img[g].addEventListener('click', function(e){
             if(this.naturalHeight/this.naturalWidth > 1) {
                 modalImg.style.height = "80vh";
@@ -270,24 +255,6 @@ window.addEventListener('DOMContentLoaded', function() {
     galleryClose.addEventListener('click', function(e){
         galleryModal.style.display = "none";
     })
-
-
-// Show more pictures for gallery
-
-    loadMoreButton.addEventListener('click', function(e){
-        counter = counter + 25;
-        for (let i = 0; i < counter && i < img.length; i++) {
-            if (i === img.length - 1) {
-                loadMoreButton.style.display = 'none';
-            }
-            if(img[i].naturalHeight/img[i].naturalWidth > 1){
-                img[i].style.flex = "1";
-                counter = counter + 2;
-            }
-            img[i].style.display = 'block';
-        };
-    })
-
 
 // Scripts for filter
 //console.log(pageCategories)
