@@ -12,10 +12,20 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         margin: 3rem 0;
+        @media screen and (max-width: 767px)
+            width: 85%
+            margin: 0 auto
         & h1
             width: 100%;
-    &__load-more
-        margin-bottom: 3rem
+    // &__load-more
+    //     margin-bottom: 3rem
+
+.lamp,
+.bronse,
+.vase
+    display: none;
+
+
 
 .gallery-image
     border-style: none;
@@ -25,6 +35,11 @@
     display: block;
     width: auto;
     max-width: 320px;
+    @media screen and (max-width: 767px)
+        flex: 1
+        width: 100%
+        height: auto
+        margin: 1rem auto
 
 .gallery-modal
     display: none;

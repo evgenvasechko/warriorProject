@@ -46,6 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var endStart;
     //Variables for gallery filter
     var pageCategories = document.querySelectorAll('.filter-unit');
+    var galleryCategory = document.querySelectorAll('.gallery-images__list');
 
     window.onscroll = function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -66,7 +67,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
         Sorted.forEach(function(item){
-            item.style.display = 'block';
+            item.style.display = 'flex';
         })
         //console.log(Sorted);
         Sorted = [];
@@ -267,7 +268,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 item.classList.remove('filter-unit_active');
             }) 
             this.classList.add('filter-unit_active');
-            SortBy(this, img);
+            SortBy(this, galleryCategory);
         });
     }
 });
